@@ -1,0 +1,71 @@
+:host {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 88px;
+  z-index: 10;
+  pointer-events: none;
+  background: linear-gradient(to top, #14211a 55%, transparent);
+}
+
+.trail {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 14px;
+  border-top: 2px dashed #3a5a40;
+}
+
+.pug {
+  position: absolute;
+  bottom: 14px;
+  width: 96px;
+  height: 64px;
+  left: calc(16px + var(--p) * (100% - 128px));
+}
+
+.leg {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+}
+
+.tail {
+  transform-box: fill-box;
+  transform-origin: 100% 100%;
+  animation: tail 0.3s ease-in-out infinite alternate;
+}
+
+.running .body {
+  animation: bob 0.36s ease-in-out infinite;
+}
+
+.running .leg {
+  animation: leg 0.36s ease-in-out infinite alternate;
+}
+
+.running .leg.b {
+  animation-direction: alternate-reverse;
+}
+
+@keyframes bob {
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes leg {
+  from { transform: rotate(-32deg); }
+  to { transform: rotate(32deg); }
+}
+
+@keyframes tail {
+  from { transform: rotate(-12deg); }
+  to { transform: rotate(14deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .running .body,
+  .running .leg,
+  .tail {
+    animation: none;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="trail"></div>
+<div class="pug" [class.running]="running()" [style.transform]="facing() === 1 ? 'none' : 'scaleX(-1)'">
+  <svg class="body" width="96" height="64" viewBox="0 0 96 64" aria-hidden="true">
+    <path class="tail" d="M20 32C12 30 10 20 17 20C22 20 22 27 17 27" fill="none" stroke="#D9B98A" stroke-width="4" stroke-linecap="round" />
+    <rect class="leg a" x="60" y="42" width="7" height="18" rx="3.5" fill="#D9B98A" />
+    <rect class="leg b" x="51" y="42" width="7" height="18" rx="3.5" fill="#BFA074" />
+    <rect class="leg b" x="26" y="42" width="7" height="18" rx="3.5" fill="#D9B98A" />
+    <rect class="leg a" x="17" y="42" width="7" height="18" rx="3.5" fill="#BFA074" />
+    <ellipse cx="44" cy="36" rx="27" ry="15" fill="#D9B98A" />
+    <circle cx="76" cy="26" r="14" fill="#D9B98A" />
+    <ellipse cx="68" cy="16" rx="5" ry="8" transform="rotate(-20 68 16)" fill="#3B2A20" />
+    <ellipse cx="83" cy="31" rx="8" ry="7" fill="#3B2A20" />
+    <circle cx="78" cy="23" r="2.4" fill="#14211A" /><circle cx="78.8" cy="22.2" r="0.8" fill="#fff" />
+    <circle cx="88" cy="29" r="2.4" fill="#14211A" />
+    <path d="M82 36C83 41 88 41 88 36Z" fill="#E57A8A" />
+  </svg>
+</div>

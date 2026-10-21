@@ -1,0 +1,23 @@
+<section class="card">
+  <h2>Catch {{ goal }} fireflies</h2>
+  <p>Dusk is falling. Gather them all to unlock something for you.</p>
+
+  @if (playing()) {
+    <div class="sky">
+      @for (fly of flies(); track fly.id) {
+        <button class="fly" aria-label="Catch firefly" [style.left.%]="fly.x" [style.top.%]="fly.y" (click)="grab(fly.id)"></button>
+      }
+    </div>
+  }
+
+  <div class="bar"><div [style.width.%]="percent()"></div></div>
+  <p class="count" aria-live="polite">{{ caught() }} / {{ goal }}</p>
+
+  @if (!playing() && !done()) {
+    <button class="go" (click)="start()">{{ caught() ? 'Keep going' : 'Begin' }}</button>
+  }
+
+  @if (done()) {
+    <p>All {{ goal }} caught. Your letter is waiting below.</p>
+  }
+</section>
