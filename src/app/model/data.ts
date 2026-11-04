@@ -3,34 +3,22 @@ export const HER_NAME = 'Jade!';
 export const YOUR_NAME = 'Ayden';
 
 export interface Memory {
-  season: string;
-  date: string;
-  title: string;
-  text: string;
+  note: string;
   photo: string;
 }
 
 export const MEMORIES: Memory[] = [
   {
-    season: 'Spring',
-    date: '[DATE]',
-    title: 'How we met',
-    text: '[A short memory about the first time you met.]',
-    photo: 'photos/spring.svg'
+    note: 'You make everything feel lighter.',
+    photo: 'photos/image0.jpeg'
   },
   {
-    season: 'Summer',
-    date: '[DATE]',
-    title: 'Our first adventure',
-    text: '[A favorite trip, hike, or moment outdoors.]',
-    photo: 'photos/summer.svg'
+    note: 'Your smile is my favorite view.',
+    photo: 'photos/image1.jpeg'
   },
   {
-    season: 'Autumn',
-    date: '[DATE]',
-    title: 'Where we are now',
-    text: '[What you love about today, and what is ahead.]',
-    photo: 'photos/autumn.svg'
+    note: 'I love you more than I can say.',
+    photo: 'photos/image2.jpeg'
   }
 ];
 

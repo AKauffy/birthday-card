@@ -1,8 +1,15 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@src/*": ["src/*"],
+      "@public/*": ["public/*"]
+    },
+    "ignoreDeprecations": "6.0",
     "outDir": "./out-tsc/spec",
     "types": ["jasmine"]
   },
-  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
+  "include": ["src/**/*.ts", "src/**/*.spec.ts", "src/**/*.d.ts"]
 }
